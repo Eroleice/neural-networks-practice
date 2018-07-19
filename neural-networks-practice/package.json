@@ -1,0 +1,9 @@
+{
+  "name": "neural-networks-practice",
+  "version": "0.0.0",
+  "description": "neural-networks-practice",
+  "main": "app.js",
+  "author": {
+    "name": "Oliver"
+  }
+}
