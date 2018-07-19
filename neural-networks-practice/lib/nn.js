@@ -97,16 +97,16 @@ class neuralNetwork {
         let hiddenErrors = matrix.multiply(weightsHOT, errors);
 
         // 计算Hidden Nodes 梯度
-        let hiddenGradient = matrix.map(hidden, dsigmoid);
-        hiddenGradient.multiply(hiddenErrors);
-        hiddenGradient.multiply(this.learningRate);
+        let hiddenGradients = matrix.map(hidden, dsigmoid);
+        hiddenGradients.multiply(hiddenErrors);
+        hiddenGradients.multiply(this.learningRate);
 
         // 计算inputs -> hidden Delta
         let inputsT = matrix.transpose(inputs);
-        let weightsIHDeltas = matrix.multiply(hiddenGradient, inputsT);
+        let weightsIHDeltas = matrix.multiply(hiddenGradients, inputsT);
 
         this.weights.ih.add(weightsIHDeltas);
-        this.bias.h.add(hiddenGradient);
+        this.bias.h.add(hiddenGradients);
     }
 }
 

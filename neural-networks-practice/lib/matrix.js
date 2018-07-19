@@ -75,7 +75,7 @@
     }
 
     print() {
-        console.table(this.data);
+        console.log(this.data);
     }
 }
 

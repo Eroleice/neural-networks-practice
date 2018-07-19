@@ -41,6 +41,9 @@
     <Compile Include="lib\nn.js">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="lib\nn2.js">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="lib\" />
